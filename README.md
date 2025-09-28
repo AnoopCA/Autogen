@@ -1,4 +1,4 @@
-# AutoGen Agentic Framework - Tutorial Code
+# AutoGen Agentic Framework
 
 This project demonstrates how to build agentic AI applications using the [AutoGen]
 
