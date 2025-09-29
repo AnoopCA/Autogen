@@ -1,4 +1,3 @@
-import os
 from autogen import AssistantAgent, UserProxyAgent
 from llm_config import llm_config
 
