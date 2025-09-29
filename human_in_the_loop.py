@@ -1,9 +1,6 @@
-import os
-from autogen import AssistantAgent, UserProxyAgent, ConversableAgent
+from autogen import ConversableAgent
 from llm_config import llm_config
-from dotenv import load_dotenv
 
-load_dotenv()
 
 ## Termination using is termination flag
 agent_with_number = ConversableAgent(
@@ -21,7 +18,6 @@ agent_with_number = ConversableAgent(
     is_termination_msg=lambda msg: "58" in msg["content"],  # Terminate if the correct number is guessed
     human_input_mode="NEVER",  # Never ask for human input
 )
-
 
 agent_guess_number = ConversableAgent(
     "agent_guess_number",
@@ -64,17 +60,18 @@ agent_with_number_term = ConversableAgent(
 
 
 if __name__ == "__main__":
-    # agent_with_number.initiate_chat(
-    #     agent_guess_number,
-    #     message="I have a number between 1 and 100. Guess it!"
-    # )
+    agent_with_number.initiate_chat(
+         agent_guess_number,
+         message="I have a number between 1 and 100. Guess it!"
+    )
+
     # # Start a chat with the agent with number with an initial guess.
     # result = human_proxy.initiate_chat(
     #     agent_with_number,  # this is the same agent with the number as before
     #     message="10",
     # )
 
-    result = agent_with_number_term.initiate_chat(
-        agent_guess_number,
-        message="I have a number between 1 and 100. Guess it!",
-    )
+    #result = agent_with_number_term.initiate_chat(
+    #    agent_guess_number,
+    #    message="I have a number between 1 and 100. Guess it!",
+    #)

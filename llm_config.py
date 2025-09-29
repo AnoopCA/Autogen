@@ -10,9 +10,9 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 llm_config = {
     "config_list": [
         {
-            "model": "gpt-4",  # This is your Azure deployment name
+            "model": "gpt-4o-mini",
             "api_key": os.getenv("AZURE_OPENAI_API_KEY"),
-            "base_url": os.getenv("AZURE_OPENAI_BASE_URL"),  # ✅ Note: ends with slash, no /deployments
+            "base_url": os.getenv("AZURE_OPENAI_BASE_URL"),
             "api_type": "azure",
             "api_version": "2025-01-01-preview"
         }
