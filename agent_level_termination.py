@@ -8,14 +8,16 @@ maddy = ConversableAgent(
     human_input_mode = "NEVER"
 )
 
-# # max consecutive auto reply
-# joe = ConversableAgent(
-#     "joe",
-#     system_message = "Your name is Joe and you are a part of a duo of comedians.",
-#     llm_config = llm_config,
-#     human_input_mode = "NEVER",
-#     max_consecutive_auto_reply=1
-# )
+ # max consecutive auto reply
+#joe = ConversableAgent(
+#    "joe",
+#    system_message = "Your name is Joe and you are a part of a duo of comedians.",
+#    llm_config = llm_config,
+#    human_input_mode = "NEVER",
+#    max_consecutive_auto_reply=1
+#)
+
+#joe.initiate_chat(maddy, message = "Hi Maddy, tell me a joke.")
 
 joe = ConversableAgent(
     "joe",
