@@ -60,16 +60,16 @@ agent_with_number_term = ConversableAgent(
 
 
 if __name__ == "__main__":
-    agent_with_number.initiate_chat(
-         agent_guess_number,
-         message="I have a number between 1 and 100. Guess it!"
-    )
+    #agent_with_number.initiate_chat(
+    #     agent_guess_number,
+    #     message="I have a number between 1 and 100. Guess it!"
+    #)
 
-    # # Start a chat with the agent with number with an initial guess.
-    # result = human_proxy.initiate_chat(
-    #     agent_with_number,  # this is the same agent with the number as before
-    #     message="10",
-    # )
+     # Start a chat with the agent with number with an initial guess.
+    result = human_proxy.initiate_chat(
+        agent_with_number,  # this is the same agent with the number as before
+        message="10",
+    )
 
     #result = agent_with_number_term.initiate_chat(
     #    agent_guess_number,
