@@ -5,8 +5,6 @@ load_dotenv(r"D:\ML_Projects\Keys\.env")
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-#llm_config = { "config_list": [{ "model": "gpt-4o-mini", "api_key": os.environ.get("OPENAI_API_KEY") }] }
-
 llm_config = {
     "config_list": [
         {
